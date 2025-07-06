@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baysite</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="sticky-header">
+    <img src="imagenes/logo_transparente.png" alt="Baysite Logo" style="max-height: 400px;"
+      onclick="window.location.href = '../index.html';" class="logo" />
+      <nav>
+        <!-- <a class="menu" href="#servicios">Servicios</a> -->
+        <a class="menu" href="../Casos Exito/index.html">Casos de Éxito</a>
+        <a class="menu" href="../index.html">Sobre nosotros</a>
+        <a class="contact-btn" href="../Contáctanos/index_contactanos.html">Contáctanos</a>
+      </nav>
+  </header>
+
+  <main>
+    <div class="two-column-layout">
+      <!-- Columna izquierda -->
+      <div class="column left-column">
+        <h2>SERVICIOS PERSONALIZADOS SEGÚN REQUERIMIENTO</h2>
+        <p>Nuestro enfoque está en comprender a fondo los procesos y desafíos de cada organización para crear soluciones
+          que optimicen sus operaciones, mejoren su eficiencia y aceleren su transición hacia lo digital.</p>
+      </div>
+
+      <!-- Columna derecha -->
+
+
+      <div class="column right-column">
+        
+        <div class="service-box">
+          <h3 class="toggle-btn" data-target="onsite-video" data-video="videos/video1.mp4">Servicio On-Site</h3>
+          <p>Implementamos nuestras soluciones directamente en las instalaciones del cliente.</p>
+          <div id="onsite-video" class="video-slide"></div>
+        </div>
+
+        <div class="service-box">
+          <h3 class="toggle-btn" data-target="hibrido-video" data-video="videos/video2.mp4">Servicio Híbrido</h3>
+          <p>Combinamos lo mejor de ambos mundos para una experiencia flexible.</p>
+          <div id="hibrido-video" class="video-slide"></div>
+        </div>
+
+        <div class="service-box">
+          <h3 class="toggle-btn" data-target="virtual-video" data-video="videos/video3.mp4">Servicio Virtual</h3>
+          <p>Ofrecemos soluciones completamente remotas con calidad asegurada.</p>
+          <div id="virtual-video" class="video-slide"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <hr style="border: none; border-top: 3px solid #999; margin: 40px auto; width: 80%;">
+  <footer>
+    <div>
+      <strong>Baysite</strong><br>
+      Address:<br>
+      Piso 12 - Calle Pedro Martinto, Lima<br>
+      Perú<br><br>
+      <a href="../index.html"><img src="imagenes/facebook logo.png" alt="Facebook" class="social-icon"
+          style="height: 40px; margin-right: 10px;"></a>
+      <a href="../index.html"><img src="imagenes/linkedin logo.png" alt="linkedin" class="social-icon"
+          style="height: 40px; margin-right: 10px;"></a>
+      <a href="../index.html"><img src="imagenes/IG logo.png" alt="Instagram" class="social-icon"
+         style="height: 40px;"></a>
+    </div>
+    <div>
+      <strong>Servicios</strong><br>
+      Servicio virtual<br>
+      Servicio híbrido<br>
+      Servicio on-site
+    </div>
+    <div>
+      <strong>Casos de éxito</strong><br>
+      Lima<br>
+      Medellín<br>
+      Públicos<br>
+      Sector
+    </div>
+    <div>
+      <strong>Sobre nosotros</strong><br>
+      Inicio<br>
+      Visión<br>
+      Equipo
+    </div>
+    <div>
+
+
+<iframe class="mapa"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.5848483873624!2d-77.0224456!3d-12.1405324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b7e55b3100eb%3A0x7c78a9b63d90c514!2sJir%C3%B3n%20Pedro%20Martinto%2012%2C%20Lima%2015063!5e0!3m2!1ses-419!2spe!4v1751783384389!5m2!1ses-419!2spe"
+  width="600" height="450"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+
+
+    </div>
+
+    <div style="width: 100%; text-align: center; margin-top: 50px;">
+      © 2025 Your Website. All rights reserved. | Privacy Policy | Terms of Service
+    </div>
+  </footer>
+
+<script>
+  const buttons = document.querySelectorAll('.toggle-btn');
+  let openBox = null;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const videoURL = btn.getAttribute('data-video');
+      const targetBox = document.getElementById(targetId);
+
+      // Cierra el anterior (si hay)
+      if (openBox && openBox !== targetBox) {
+        openBox.classList.remove('open');
+        openBox.innerHTML = ''; // Limpia el video anterior
+      }
+
+      // Toggle el actual
+      if (targetBox.classList.contains('open')) {
+        targetBox.classList.remove('open');
+        targetBox.innerHTML = '';
+        openBox = null;
+      } else {
+        targetBox.innerHTML = `
+          <iframe width="560" height="315" src="${videoURL}" 
+            title="Video ${targetId}" frameborder="0" allowfullscreen></iframe>`;
+        targetBox.classList.add('open');
+        openBox = targetBox;
+      }
+    });
+  });
+</script>
+
+</body>
+
+</html>

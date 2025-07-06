@@ -1,0 +1,213 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-align: justify ;
+}
+
+body{
+    background-image: url(ASSETS/background_CONTACTOS.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    min-height: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: hwb(180 19% 13% / 0.94);
+    align-items: center;
+    padding: 16px;
+}
+
+.contacto-menu{
+    color: black;
+    font-weight: bold;
+    background-color: #d2691ef8;
+    border-radius: 30px;
+    padding: 20px 60px;
+    margin-left: 0px;
+}
+
+a {
+    font-family: "Calibri";
+    text-decoration: none;
+    color: aliceblue;
+}
+
+nav a {
+    font-weight: 400;
+    margin-right: 60px;
+    font-size: 17px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.logo img{
+    height: 50px;
+}
+.frase-formulario{
+    display: flex;
+}
+
+.frase-1{
+    font-size: 120px;
+    font-weight: bold;
+    color: rgba(255, 166, 0, 0.906);
+    padding: 0px;
+}
+
+.frase-2{
+    font-size: 120px;
+    font-weight: bold;
+    color: rgba(240, 248, 255, 0.877);
+    padding: 0px;
+    
+}
+
+.frase-3{
+    font-size: 120px;
+    font-weight: bold;
+    color: rgba(240, 248, 255, 0.877);
+    padding: 0px;
+}
+.formulario{
+    width: 400px;
+    background-color: rgba(210, 105, 30, 0.66);
+    padding: 12px 20px;
+    margin: auto;
+    margin-top: 70px;
+    margin-right: 90px;
+    border-radius: 15px;
+    font-family: "Calibri";
+}
+
+.controls{
+    width: 100%;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 3px;
+}
+
+#numero{
+    margin-top: 20px;
+}
+
+#cuentanos{
+    padding-bottom: 70px;
+}
+.formulario h2{
+    font-size: 22px;
+    color: aliceblue;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button{
+        margin-top: 15px;
+        margin-left: 120px;
+        padding: 8px 15px;
+        border-radius: 15px;
+}
+
+.parte-final{
+    display: flex;
+}
+
+.formas_contacto{
+    margin-bottom: 50px;
+}
+
+.location p{
+    margin-left: 10px;
+    color: aliceblue;
+}
+
+.phone p{
+    margin-left: 10px;
+    color: aliceblue;
+}
+
+.correo p{
+    margin-left: 10px;
+    color: aliceblue;
+}
+.location{
+    display: flex ;
+    background-color: rgba(255, 166, 0, 0.862);
+    padding: 3px 10px;
+    margin-bottom: 7px ;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.phone{
+    display: flex ;
+    background-color: rgba(255, 166, 0, 0.862);
+    padding: 3px 10px;
+    margin-bottom: 7px ;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.correo{
+    display: flex ;
+    background-color: rgba(255, 166, 0, 0.862);
+    padding: 3px 10px;
+    margin-bottom: 7px ;
+    align-items: center;
+    border-radius: 15px;
+}
+
+
+
+.iconos-redes{
+    margin-left: 830px;
+    margin-top: 20px;
+}
+.iconos-redes img{
+    height: 60px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 20px 10px;
+        margin: 10px;
+    }
+
+    .contacto-menu{
+    border-radius: 15px;
+    padding: 3px 10px;
+    margin: 10px;
+}
+
+body{
+    background-image: url(ASSETS/background_CONTACTOS.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+}
+

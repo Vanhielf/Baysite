@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(Imagen\ 1.png);
+  background-size: cover;
+  color: #333;
+}
+
+.casos-exito {
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.casos-exito h1 {
+  text-align: center;
+  font-size: 3em;
+  color: #1f3b73;
+  margin-bottom: 10px;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.grid-casos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.caso {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.caso h2 {
+  margin-bottom: 8px;
+  color: #1f3b73;
+  font-size: 1.1em;
+}
+
+.caso p {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.llamada {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #1f3b73;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.boton:hover {
+  background: #163061;
+}
