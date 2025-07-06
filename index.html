@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baysite</title>
+    <link rel="stylesheet" href="./Página principal/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="./assets/main_bg.jpg" class="background">        
+        <header id="header">
+
+            <div class="logo" onclick="window.location.href = './index.html';">
+                <img src="./assets/BAYSITE LOGO.png" alt="">
+            </div>
+            <div class="options">
+                <a class="header-option" href="#servicios">
+                    Servicios
+                </a>
+                <a class="header-option" href="#servicios">
+                    Casos de Éxito 
+                </a>
+                <a class="header-option" href="">
+                    Sobre Nosotros
+                </a>
+                <a class="header-option" id="contact" href="./Contáctanos/index_contactanos.html">
+                    Contáctanos
+                </a>
+            </div>
+        </header>
+
+        <div class="container-body">
+
+            <section>
+                <h1>Software a medida,</h1>
+                <h1>confianza costeña.</h1>
+            </section>
+            <section>
+                <a class="hablemos" href="./Contáctanos/index_contactanos.html">Hablemos</a>
+                <hr style="border: 1px dotted rgba(0, 0, 0, 0.493); width: 7em;">
+            </section>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <img src="./assets/main_bg_ud.jpg" class="background">
+        <div class="container-body">
+
+            <h3>Qué podemos hacer por ti?</h3>
+            <ul id="descripciones">
+                <li>
+                    <h2>Crezcamos juntos</h2>
+                    <p>Ofrecemos soluciones tecnológicas personalizadas para tu negocio. Nuestro enfoque es facilitar tu transición a digital.</p>
+                    <a class="hablemos" href="./Contáctanos/index_contactanos.html">Háblenos</a>
+                </li>
+                <hr style="height: 4px;">
+                <li id="servicios" style="color: rgb(255, 255, 255);">
+                    <h2>Servicios</h2>
+                    <div id="descripcion-servicios">
+                        <p>Los tres tipos de servicios que ofrecemos:</p>
+                        <ul style="font-size: 1.2em;">
+                            <li>Virtual</li>
+                            <li>On-site</li>
+                            <li>Híbrido</li>
+                        </ul>
+                    </div>
+                    <a class="aprende-mas" href="./Servicios/index_servicios.html" style="color: white;">Aprende más</a>
+                </li>
+                <hr style="height: 2px;">
+                <li>
+                    <h2>Casos de éxito</h2>
+                    <p>Entérate sobre nuestros clientes satisfechos, ¡no te arrepentirás!  </p>
+                    <a class="aprende-mas" href="./Casos Exito/index.html" style="color: black;">Aprende más</a>
+                </li>
+                <hr>
+            </ul>
+        </div>
+
+        <footer id="footer">
+
+            <div class="logo" onclick="window.location.href = './index.html';">
+                <img src="./assets/BAYSITE LOGO.png" alt="">
+            </div>
+
+            <div class="options-2" onclick="window.location.href = './Contáctanos/index_contactanos.html';">
+
+                <div class="footer-option">
+                    <img src="./assets/linkedin logo.png" alt="">
+                    <img src="./assets/facebook logo.png" alt="">
+                    <img src="./assets/IG logo.png" alt="">
+                </div>
+                <div class="footer-option">RUC 20508518063</div>
+                <div class="footer-option">Todos los derechos reservados Baysite 2025</div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script>
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', () => {
+        const isAtTop = window.scrollY === 0;
+
+        if (isAtTop) {
+            header.classList.remove('blur');
+        } else {
+            header.classList.add('blur');
+        }
+        });
+    </script>
+</body>
+</html>
