@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="icon" href="assets/LOGO_SIN_FONDO.png">
+    <link rel="stylesheet" href="stylescontacto.css">
+    <script src="scriptcontacto.js"></script>
+</head>
+
+<body>
+
+    <!-- Contenedor Principal -->
+    <div id="padre">
+        <!-- Cabecera del sitio -->
+        <header>
+            <section>
+                <!-- Logo clickeable -->
+                <a href="">
+                    <img id="logo" src="assets/LOGO_SIN_FONDO.png" alt="">
+                </a>
+            </section>
+            <!-- Menú de Navegacion Principal -->
+            <nav id="menu">
+                <a href="">Servicios</a>
+                <a href="">Casos de Éxito</a>
+                <a href="">Sobre Nosotros</a>
+                <a href="" id="menu-contactanos">Contáctanos</a>
+            </nav>
+        </header>
+
+
+        <!-- Contenedor del Formulario-->
+        <div class="form-container">
+            <!-- Encabezado del Formulario con Barra de Progreso -->
+            <div class="form-header">
+                <h1>Reserva una Cita</h1>
+                <!-- Barra de Progreso con 4 pasos-->
+                <div class="progress-bar">
+                    <div class="progress-step active" data-step="1">1</div><!-- data-step sirve para Identificar numéricamente cada paso (1, 2, 3...) y permitirá que js sepa qué paso corresponde a cada círculo-->
+                    <div class="progress-step" data-step="2">2</div>
+                    <div class="progress-step" data-step="3">3</div>
+                    <div class="progress-step" data-step="4">4</div>
+                </div>
+            </div>
+
+            <!-- Formulario Multipasos -->
+            <form class="multiSttepForm" action="">
+                <!-- PASO 1: Datos Personales -->
+                <div class="form-step active" data-step="1">
+                    <h2>Datos del Usuario:</h2>
+                    <!-- Fila de 2 campos: Nombre completo y DNI/CE -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="">Apellidos y Nombres:</label>
+                            <input type="text" id="nombres" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">DNI/CE:</label>
+                            <input type="text" id="dni" required>
+                        </div>
+                    </div>
+
+                    <!-- Fila de 2 campos: Cargo y telefono -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="">Cargo:</label>
+                            <input type="text" id="cargo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Teléfono:</label>
+                            <input type="text" id="telefono">
+                        </div>
+                    </div>
+                    <!-- Fila de 2 campos: Direccion y Codigo Postal -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="">Dirección:</label>
+                            <input type="text" id="direccion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Codigo Postal:</label>
+                            <input type="text" id="codigoPostal">
+                        </div>
+                    </div>
+
+                    <!-- Fila de 3 campos: País, Provincia y Distrito -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pais">País:</label>
+                            <select name="pais" id="pais">
+                                <option value="">-- Selecciona un país --</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Perú">Perú</option>
+                                <option value="España">España</option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="Alemania">Alemania</option>
+                                <option value="Noruega">Noruega</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Bolivia">Bolivia</option>
+                                <option value="Ecuador">Ecuador</option>
+                                <option value="Estados Unidos">Estados Unidos</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="provincia">Provincia:</label>
+                            <select id="provincia" required>
+                                <option value="">-- Seleccione provincia --</option>
+                                <option value="Lima">Lima</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Distrito:</label><!--tiene que tener opciones-->
+                            <select id="distritos" name="distritos">
+                                <option value="">-- Seleccione un distrito de Lima --</option>
+                                <option value="Lima">Lima (Cercado de Lima)</option>
+                                <option value="Barranco">Barranco</option>
+                                <option value="La Molina">La Molina</option>
+                                <option value="Miraflores">Miraflores</option>
+                                <option value="Pueblo Libre">Pueblo Libre</option>
+                                <option value="San Borja">San Borja</option>
+                                <option value="San Isidro">San Isidro</option>
+                                <option value="Santiago de Surco">Santiago de Surco</option>
+                                <option value="Surquillo">Surquillo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Botón para avanzar al siguiente paso -->
+                    <button type="button" class="next-btn">Siguiente</button>
+                </div>
+
+                <!-- Datos de la Empresa -->
+                <div class="form-step" data-step="2">
+                    <h2>Datos de la Empresa</h2>
+                    <div class="form-group">
+                        <label for="">Nombre de la Empresa:</label>
+                        <input type="text" id="Empresa">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Sector o Industria:</label>
+                        <input type="text" id="sector">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="">Teléfono Empresarial:</label>
+                            <input type="text" id="telefonoEmpresa">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Correo Empresarial:</label>
+                            <input type="text" id="correoEmpresa">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form group">
+                            <label for="">Dirección:</label>
+                            <input type="text" id="direccionEmpresa">
+                        </div>
+                        <div class="form group">
+                            <label for="">Codigo Postal:</label>
+                            <input type="text" id="codigoPostalEmpresa">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="">País:</label>
+                            <select name="Pais" id="Pais">
+                                <option value="">-- Selecciona un país --</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Perú">Perú</option>
+                                <option value="España">España</option>
+                                <option value="Mexico">Mexico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Provincia:</label>
+                            <select name="Provincia" id="Provincia">
+                                <option value="">-- Seleccione un distrito de Lima --</option>
+                                <option value="Lima">Lima (Cercado de Lima)</option>
+                                <option value="Ancón">Ancón</option>
+                                <option value="Ate">Ate</option>
+                                <option value="Barranco">Barranco</option>
+                                <option value="Breña">Breña</option>
+                                <option value="Carabayllo">Carabayllo</option>
+                                <option value="Chaclacayo">Chaclacayo</option>
+                                <option value="Comas">Comas</option>
+                                <option value="Pucusana">Pucusana</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Distrito:</label>
+                            <select id="distritos" name="distritos">
+                                <option value="">-- Seleccione un distrito --</option>
+                                <option value="Lima">Lima (Cercado de Lima)</option>
+                                <option value="Ancon">Ancón</option>
+                                <option value="Ate">Ate</option>
+                                <option value="Barranco">Barranco</option>
+                                <option value="Breña">Breña</option>
+                                <option value="Carabayllo">Carabayllo</option>
+                                <option value="Chaclacayo">Chaclacayo</option>
+                                <option value="Chorrillos">Chorrillos</option>
+                                <option value="Cieneguilla">Cieneguilla</option>
+                                <option value="Comas">Comas</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                    <!-- fila de dos campos: servicio y numero de personas-->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="servicio">Servicio Solicitado</label><!--tiene que tener opciones-->
+                            <select name="" id="servicio" required>
+                                <option value="">-- Selecciona un Servicio --</option>
+                                <option value="On-Site">On-Site</option>
+                                <option value="Híbrido">Híbrido</option>
+                                <option value="Virtual">Virtual</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="personas">Número de Personas:</label><!--tiene que tener opciones del 1 al 20-->
+                            <input type="number" id="personas" min="1" max="20" value="1">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Adjuntar Archivos:</label><!--tiene que tener opciones-->
+                        <input type="file" id="archivos" multiple>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" class="prev-btn">Anterior</button>
+                        <button type="button" class="next-btn">Siguiente</button>
+                    </div>
+                </div>
+
+                <!-- PASO 3: Fecha y Hora -->
+                <div class="form-step" data-step="3">
+                    <h2>Día y Hora de reserva</h2>
+                    <!-- Fila de 2 campos: fecha y hora -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dia">Elige el dia:</label>
+                            <input type="date" value="2025-07-11" id="fecha" min="2025-07-11" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hora">Elige la hora:</label>
+                            <input type="time" id="hora" min="07:00" max="17:00" require>
+                        </div>
+                    </div>
+
+                    <!-- Botones de navegación entre pasos -->
+                    <div class="button-group">
+                        <button type="button" class="prev-btn">Anterior</button>
+                        <button type="button" class="next-btn">Siguiente</button>
+                    </div>
+                </div>
+
+
+                <!-- PASO 4: Comentarios -->
+                <div class="form-step" data-step="4">
+
+                    <h2>Datos Adicionales</h2>
+                    <div class="form-group">
+                        <label for="">Comentarios o Dudas:</label>
+                        <textarea id="comentarios" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">¿Cómo se enteró de nosotros?</label>
+                        <textarea id="comentarios" rows="4"></textarea>
+                    </div>
+
+                    <!-- Checkbox, terminos y condiciones -->
+                    <div class="form-group checkbox-group">
+                        <p>
+                            <input type="checkbox" id="terminos" required>
+                            Estoy de acuerdo con <a href="">los términos y condiciones</a>
+                        </p>
+                    </div>
+
+                    <!--se conecta o envia la informacion a la base de datos-->
+                    <div class="button-group">
+                        <button type="button" class="prev-btn">Anterior</button>
+                        <button type="submit" class="submit-btn">Enviar Reserva</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <!-- acaba formulario --><!-- acaba formulario --><!-- acaba formulario --><!-- acaba formulario --><!-- acaba formulario -->
+
+        <footer>
+            <nav class="footersub" id="cmp">
+                <a href=""><img src="assets/iconos-png/location.png" alt="">Av. Jose Pardo 610</a>
+                <a href=""><img src="assets/iconos-png/phone.png" alt="">944 117 897</a>
+                <a href=""><img src="assets/iconos-png/envelope-alt.png" alt="">Bysite@mail.com</a>
+            </nav>
+            <nav class="footersub" id="redesF">
+                <a href=""><img class="redes" src="assets/PIE/facebook.png" alt=""></a>
+                <a href=""><img class="redes" src="assets/PIE/instagram.png" alt=""></a>
+                <a href=""><img class="redes" src="assets/PIE/linkedin.png" alt=""></a>
+                <a href=""><img class="redes" src="assets/PIE/x.png" alt=""></a>
+            </nav>
+        </footer>
+    </div>
+
+
+</body>
+
+</html

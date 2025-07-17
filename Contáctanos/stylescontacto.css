@@ -1,0 +1,257 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: justify;
+}
+ body{
+    background: linear-gradient(rgba(5,7,12,0.75)), url(assets/background_CONTACTOS.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#padre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+header{
+    width: 100%;
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    width: 100px;
+    vertical-align: middle;
+}
+#menu {
+
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 20px;
+}
+
+#menu-contactanos{
+    background-color: orange;
+    border-radius: 15px;
+    padding: 10px auto;
+}
+
+
+footer{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px;
+}
+
+#cmp{
+    
+    width: 50%;
+    display: flex;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+    
+}
+#cmp a{
+    color: aliceblue;
+    background-color: rgba(255, 166, 0, 0.832);
+    border-radius: 20px;
+    text-decoration: none; 
+    padding: 10px 40px; 
+    font-weight: bold;
+ }
+
+#cmp a img{
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+    
+}
+
+
+#redesF{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.redes{
+    width: 40px;
+    border-radius: 15px;
+}
+
+/* Estilos del formulario */
+.form-container{
+    background: rgba(255, 166, 0, 0.641);
+    padding: 30px; /* Espaciado interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 30px auto; /* Margen superior e inferior, centrado */
+    max-width: 800px; /* Ancho máximo del formulario */
+}
+
+/* Encabezado del formulario */
+.form-header {
+  
+    text-align: center; /* Texto centrado */
+    margin-bottom: 30px; /* Espacio inferior */
+}
+
+h1 {
+   
+    text-align: center;
+}
+
+/* Barra de progreso */
+.progress-bar {
+    display: flex; /* Disposición flexible */
+    justify-content: space-between; /* Espacio entre elementos */
+    margin: 20px auto; /* Margen superior e inferior, centrado */
+    max-width: 500px; /* Ancho máximo */
+}
+
+/* Pasos individuales de la barra de progreso */
+.progress-step {
+    width: 40px; /* Ancho fijo */
+    height: 40px; /* Alto fijo */
+    background: #ddd; /* Color de fondo inactivo */
+    border-radius: 50%; /* Forma circular */
+    display: flex; /* Para centrar el número */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    font-weight: bold; /* Texto en negrita */
+    color: #777; /* Color de texto inactivo */
+}
+
+.progress-step.active {
+    background: #3498db; /* Color azul para paso activo */
+    color: white; /* Texto blanco */
+}
+
+.form-step {
+    display: none; /* Oculto inicialmente */
+}
+
+.form-step.active {
+    display: block; /* Mostrar cuando está activo */
+}
+
+/* Grupo de campos del formulario */
+.form-group {
+    margin-bottom: 20px; /* Espacio entre grupos */
+}
+
+/* Fila para colocar campos lado a lado */
+.form-row {
+    display: flex; /* Disposición flexible */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+/* Campos dentro de una fila */
+.form-row .form-group {
+    flex: 1; /* Ocupan espacio equitativo */
+}
+
+/* ========== ESTILOS DE ELEMENTOS DEL FORMULARIO ========== */
+/* Etiquetas */
+label {
+    display: block; /* Ocupa toda la línea */
+    margin-bottom: 8px; /* Espacio inferior */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Campos de entrada, selects y textareas */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select,
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 4px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño de fuente legible */
+}
+
+button {
+    padding: 12px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cursor tipo pointer */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background 0.3s; /* Transición suave */
+}
+
+.next-btn, .submit-btn {
+    background: #3498db; /* Color azul */
+    color: white; /* Texto blanco */
+}
+
+.next-btn:hover, .submit-btn:hover {
+    background: #2980b9; /* Azul más oscuro */
+}
+
+/* Botón Anterior */
+.prev-btn {
+    background: #95a5a6; /* Color gris */
+    color: white; /* Texto blanco */
+    margin-right: 10px; /* Espacio a la derecha */
+}
+
+.prev-btn:hover {
+    background: #7f8c8d; /* Gris más oscuro */
+}
+
+.button-group {
+    display: flex; /* Disposición flexible */
+    justify-content: flex-end; /* Alineado a la derecha */
+    margin-top: 30px; /* Espacio superior */
+}
+
+.checkbox-group {
+    display: flex; /* Disposición flexible */
+    align-items: center; /* Centrado vertical */
+}
+
+/* Grupo de checkbox */
+.checkbox-group {
+    display: flex; /* Disposición flexible */
+    align-items: center; /* Centrado vertical */
+}
+
+/* Checkbox personalizado */
+.checkbox-group input {
+    width: auto; /* Ancho automático */
+    margin-right: 10px; /* Espacio a la derecha */
+}
